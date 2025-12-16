@@ -1,16 +1,46 @@
 "use client"
 
+"use client"
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 
 export default function ContactForm() {
+  const router = useRouter();
+
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    // Post to the static helper so Netlify detects fields at deploy-time
+    try {
+      const body = new URLSearchParams();
+      for (const [k, v] of formData.entries()) {
+        body.append(k, String(v));
+      }
+
+      await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      });
+
+      router.push('/success');
+    } catch (err) {
+      // Fallback: show a basic error; you can replace with better UI
+      console.error('Form submission failed', err);
+      alert('Une erreur est survenue lors de l’envoi du message. Réessaie plus tard.');
+    }
+  };
+
   return (
     <form
       name="contact"
-      method="POST"
-      action="/success"
+      onSubmit={handleFormSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       className="w-full max-w-2xl mx-auto grid grid-cols-1 gap-4"

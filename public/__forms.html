@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify forms helper</title>
+  </head>
+  <body>
+    <!-- This file exists only to allow Netlify to detect form fields at deploy time. It is never shown to users. -->
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact">
+      <input name="name" type="text">
+      <input name="email" type="email">
+      <input name="message" type="text">
+      <input name="bot-field" type="text">
+      <input name="form_ts" type="hidden" value="">
+    </form>
+  </body>
+</html>
