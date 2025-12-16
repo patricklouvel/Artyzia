@@ -1,0 +1,44 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "An illustration of a 3D printer and a laptop in a retro Atari box art style.",
+      "imageUrl": "/assets/hero.png",
+      "width": 800,
+      "height": 600,
+      "imageHint": "atari style illustration"
+    },
+    {
+      "id": "about",
+      "description": "An illustration of electronic circuit boards in a retro Atari box art style.",
+      "imageUrl": "/assets/Hero2.png",
+       "width": 800,
+      "height": 600,
+      "imageHint": "retro circuit boards"
+    },
+    {
+      "id": "projectFrog",
+      "description": "Illustration of a frog game, in a retro Atari box art style.",
+      "imageUrl": "/assets/projectTech.png",
+      "imageHint": "retro game illustration"
+    },
+    {
+      "id": "projectNautiflix",
+      "description": "Illustration for a streaming platform called Nautiflix, in a retro Atari box art style.",
+      "imageUrl": "/assets/nautiflix2.png",
+      "imageHint": "retro streaming interface"
+    },
+    {
+      "id": "projectJewelry",
+      "description": "Illustration for a 3D printed jewelry project, in a retro Atari box art style.",
+      "imageUrl": "/assets/ArtyziaJewels.png",
+      "imageHint": "retro 3d jewelry"
+    },
+    {
+      "id": "projectGps",
+      "description": "Illustration for a GPS regatta project, in a retro Atari box art style.",
+      "imageUrl": "/assets/projectGps.png",
+      "imageHint": "retro GPS map"
+    }
+  ]
+}
